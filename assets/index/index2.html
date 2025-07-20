@@ -1,0 +1,369 @@
+<!DOCTYPE html> <!-- هذا يخبر المتصفح أن الملف يستخدم HTML5 -->
+
+<html lang="en"> <!-- بداية الصفحة وتحديد اللغة (هنا الإنجليزية) -->
+<head>
+  <meta charset="UTF-8" /> <!-- ترميز الحروف، ضروري لدعم العربية والرموز -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- يجعل التصميم متجاوب مع الهواتف والأجهزة المختلفة -->
+
+  <title>Mohammed Nouar</title> <!-- عنوان الصفحة الذي يظهر في التبويب -->
+
+  <!-- أيقونة التبويب (favicon) -->
+  <link rel="icon" href="assets/imags/icon.png" />
+ 
+ 
+   
+ 
+ 
+
+  <!-- استدعاء مكتبة الأيقونات Font Awesome من الإنترنت -->
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+ 
+ 
+  <!-- ف CSS مخصص من مجلد المشروع  -->
+  <link rel="stylesheet" href= "assets/css/styl.css" />
+ 
+
+
+ 
+                <!-- بداية جسم الصفحة -->
+<body>
+
+
+
+<!-- بداية عنصر السلة -->
+<div class=" cart ">
+  <div class="top_cart">
+    <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+    <span onclick="open_close_cart()" class="close_cart" id="close_cart_btn">
+      <i class="fa-regular fa-circle-xmark"></i>
+    </span>
+  </div>
+
+  <div class="items_in_cart" id="cart_items"></div>
+
+  <div class="bottom_cart">
+    <div class="total">
+      <p>Subtotal</p>
+      <p class="price_cart_toral">$0</p>
+    </div>
+  </div>
+
+  <div class="button_cart">
+    <a href="#" class="btn_cart btn">Checkout</a>
+    <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+  </div>
+</div>
+<!-- نهاية عنصر السلة -->
+
+
+<header>
+  <!-- بداية ترويسة الموقع -->
+ <div class="top_header"> <!-- شريط علوي لترويسة الموقع -->
+      <div class="container"> <!-- حاوية لتوسيط المحتوى -->
+
+        <!-- الشعار (لوجو الموقع) -->
+        <a href="#" class="logo"><img src="assets/imags/logo.png" alt="Logo" />
+          <!-- alt هو النص البديل إذا لم تظهر الصورة -->
+        </a>
+
+         <!-- صندوق البحث -->
+        <form action="#" class="search_box">
+          <!-- صندوق تحديد الفئة -->
+          <!-- <div class="select_box"> -->
+
+            <select id="category" name="category">
+
+              <!-- خيارات الفئات -->
+               <option value="ختر فئة">اختر فئة</option>
+              <option value="اكسسوارات">اكسسوارات</option>
+              <option value="الكترونيات">الكترونيات</option>
+              <option value="ملابس">ملابس</option>
+              <option value="أحذية">أحذية</option> 
+              <!-- يمكنك ضافة المزيد من الفئات حسب حاجتك
+            </select>
+          </div> 
+
+          <-- حقل كتابة البحث -->
+          <input type="text" name="search" id="search" placeholder="ابحث عن منتج" />
+
+          <!-- زر البحث -->
+          <button type="submit"> 
+            <i class="fa-solid fa-magnifying-glass"></i> <!-- أيقونة العدسة -->
+          </button>
+        </form>
+
+        <!-- الأيقونات الجانبية في الترويسة -->
+           <div class="header_icons">
+          <!-- أيقونة المفضلة -->
+          <div class="icon">
+            <a href="#">
+              <i class="fa-regular fa-heart"></i> <!-- أيقونة القلب -->
+              <span class="count count_favourite">0</span> <!-- عدد العناصر -->
+            </a>
+          </div>
+
+          <!-- أيقونة سلة المشتريات -->
+          <div onclick="open_close_cart()" class="icon">
+            <a href="#">
+              <i class="fa-solid fa-cart-shopping"></i> <!-- أيقونة السلة -->
+              <span class="count count_time_header">0</span> <!-- عدد المنتجات -->
+            </a>
+          </div>
+        </div>
+
+      </div> <!-- نهاية .container -->
+  
+  
+  
+
+  
+  
+     <!-- نهاية .top_header -->
+  
+     <div class="botton_header"> 
+   <div class="container">
+    <nav class="nav">
+
+
+    <span  onclick="open_Manu()"  class="open_menu"><i class="fa-solid fa-bars"></i></span>
+
+      <div class="category_nav">
+ 
+
+ <div  onclick="Open_Categ_list()"   class="category_btn"> 
+  <i class="fa-solid fa-bars"></i>
+            <p>Browse Category</p>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+       
+
+  
+      <div class="category_nav_list">
+          <a href="#"> tpo 10 offers</a>
+          <a href="#"> tpo 9 offers</a>
+          <a href="#"> tpo 8 offers</a>
+          <a href="#"> tpo 7 offers</a>
+          <a href="#"> tpo 6 offers</a>
+          <a href="#"> tpo 5 offers</a>
+          <a href="#"> tpo 4 offers</a>
+        </div>
+
+
+
+</div>
+      
+       <ul class="nav_links">
+
+        <span onclick="open_Manu()"  class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+
+          <li class="active"><a href="index1.Html">Home</a></li>
+          <!-- <li><a href="#">about</a></li> -->
+          <!-- <li><a href="#"> accesories</a></li> -->
+          <!-- <li><a href="#"> Blog </a></li> -->
+          <!-- <li><a href="#">contact</a></li> -->
+
+        </ul>
+
+</nav>
+
+      
+
+      
+        
+      <div class="login_signup  btns">
+   <a href="#"  class="btn" >بكم  <!-- <i class="fa-solid fa-right-to-bracket"></i> --> </a> 
+
+  <a href="#"  class="btn" >مرحبا   <!--  <i class="fa-solid fa-user-plus"></i> --> </a>
+
+   </div>
+
+
+
+       
+
+
+
+
+
+
+
+  </div>
+  </div>
+
+
+  </div>
+  
+</header>
+
+ <section class="checkout">
+  <form id="form_contact">
+
+   <input type="hidden" id="items" name="items">
+   <input type="hidden" id="total_price" name="Total Price">
+   <input type="hidden" id="count_Items" name="Count Items">
+
+
+    <div class="container">
+      <div class="ordersummary">
+        <h1>Order Summary</h1>
+        <div class="items" id="checkout_items">
+          <!-- عناصر الطلب يمكن إضافتها هنا -->
+        </div>
+
+        <div class="bottom_summary">
+          <div class="shop_table">
+            <p>Subtotal :</p>
+            <span class="subtotal_checkout">$325.00</span>
+          </div>
+
+          <div class="shop_table">
+            <p>Shipping :</p>
+            <span>20.00</span>
+          </div>
+
+          <div class="shop_table">
+            <p>Total :</p>
+            <span class="total_checkout">345.00</span>
+          </div>
+
+          <div class="button_div">
+            <button onclick="Im_Submit(Im_submit)" id="Im_submit" type="submit">Place order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="input_info">
+        <div class="address">
+          <h2>Delivery Address</h2>
+
+          <div class="inputs">
+            <!-- <label>Email</label> -->
+             <!-- <input type="email" placeholder="Enter your email" name="Email" required> -->
+
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" name="Name" required>
+
+            <label>Address</label>
+            <input type="text" placeholder="Enter your address" name="Address" required>
+
+            <label>Phone</label>
+            <input type="number" placeholder="Enter your phone" name="Phone" required>
+          </div>
+        </div>
+
+        <div class="coupon">
+          <h2>Coupon Code</h2>
+          <div class="inputs">
+            <label>Coupon code</label>
+            <input type="text" placeholder="Enter your coupon code" name="Coupon">
+          </div>
+
+          <div class="btn_coupon">
+            <button type="button">Apply Coupon</button> <!-- لا يرسل الفورم -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p id="status" style="color: green;"></p> <!-- لعرض النتيجة -->
+  </form>
+</section>
+
+
+
+    
+
+    
+     <footer> 
+      <div class="container">
+        <div class="big_row">
+           <img class="logo_footer" src="assets/imags/white_logo.png">
+           
+           <p>Lorem, ipsum dolor sit amet consectetur adipisicing?</p>
+          
+           <div class="icons_footer">
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          
+          </div>
+        </div>
+
+
+       <div class="row">
+        <h4>Find It Fast</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+        </div>
+       </div>
+
+       <div class="row">
+        <h4>Quick Links</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+        </div>
+       </div>
+
+       <div class="row">
+        <h4>Service us</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i>lapotps and comput</a>
+        </div>
+       </div>
+
+      </div>
+   <div class="bottom_footer">
+    <div class="container">
+      <p>&copy; <span>Hima Zoom.</span> All Rights</p>
+       
+      <div class="paymentimg">
+         <img src="assets/imags/payment_method.png" alt="">
+       </div>
+    </div>
+   </div>
+
+    </footer> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- fill js -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/mani.js"></script>
+ <script src="assets/js/submit_checkout.js"></script>
+</body>
+</html>  
